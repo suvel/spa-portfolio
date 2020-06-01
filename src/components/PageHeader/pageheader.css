@@ -1,0 +1,33 @@
+@font-face {
+  font-family: DMSerifDisplay-Regular;
+  src: url("../../assets/fonts/DMSerifDisplay-Regular.ttf");
+}
+
+.page-header {
+  font-family: DMSerifDisplay-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10em;
+  color: white;
+  margin: 10px 0px 120px;
+  letter-spacing: 20px;
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 769px) {
+  .page-header {
+    font-size: 2.5em;
+
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page-header {
+    font-size: 5em;
+  }
+}

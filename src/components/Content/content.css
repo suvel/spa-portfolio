@@ -1,0 +1,49 @@
+@font-face {
+  font-family: roboto-bold;
+  src: url("../../assets/fonts/RobotoCondensed-Bold.ttf");
+}
+
+.portfolio-details-container .header {
+  font-family: roboto-bold;
+  font-size: 48px;
+  -webkit-text-stroke: 0.070em black;
+  -webkit-text-fill-color: white;
+  letter-spacing: -2px;
+}
+
+.portfolio-details-container .body {
+  font-weight: 100;
+  font-size: 24px;
+  color: white;
+}
+
+.portfolio-details-container .emoji {
+  -webkit-text-stroke: 0px;
+}
+
+@media (max-width: 480px) {
+  .portfolio-details-container .body {
+    font-size: 16px;
+  }
+  .portfolio-details-container .header {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 769px) {
+  .portfolio-details-container .header {
+    font-size: 30px;
+  }
+  .portfolio-details-container .body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .portfolio-details-container .header {
+    font-size: 30px;
+  }
+  .portfolio-details-container .body {
+    font-size: 16px;
+  }
+}

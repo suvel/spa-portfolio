@@ -1,0 +1,101 @@
+@font-face {
+  font-family: roboto-regular;
+  src: url("./assets/fonts/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: roboto-thin;
+  src: url("./assets/fonts/Roboto-Thin.ttf");
+}
+
+.App {
+  text-align: center;
+}
+
+.portfolio-style > .quotes-wrapper,
+.container:not(:last-child) {
+  margin-bottom: 9rem;
+}
+
+.container {
+  position: relative;
+  padding: 40px 5vh;
+  font-family: roboto-thin;
+}
+
+.personal-image {
+  z-index: 1;
+  width: 800px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.intro-paragraph {
+  font-style: normal;
+  font-size: 2em;
+  color: white;
+}
+
+.weight-regular {
+  font-size: 2em;
+  font-family: roboto-regular !important;
+}
+
+.bold-link {
+  font-weight: 500;
+}
+
+.justified-paragraph {
+  text-align: justify;
+}
+
+@media (max-width: 480px) {
+  .personal-image {
+    display: none;
+  }
+  .intro-paragraph {
+    font-size: 1.2em;
+  }
+  .author-quotes-container {
+    font-size: 20px;
+  }
+  .justified-paragraph {
+    text-align: left;
+  }
+  .quotes-content-container {
+    flex-direction: column;
+  }
+  .author-image-container {
+    height: 165px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 769px) {
+  .intro-paragraph {
+    font-size: 1.2em;
+  }
+  .author-quotes-container {
+    font-size: 24px;
+    max-width: 23rem;
+  }
+  .personal-image {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .portfolio-style {
+    background-size: contain;
+  }
+  .intro-paragraph {
+    font-size: 1.5em;
+  }
+  .author-quotes-container {
+    font-size: 24px;
+    max-width: 23rem;
+  }
+  .personal-image {
+    width: calc(800px - 12vh);
+  }
+}

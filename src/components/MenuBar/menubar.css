@@ -1,0 +1,68 @@
+:root {
+  --highlight-color: #0060F3;
+}
+@font-face {
+  font-family: roboto-regular;
+  src: url("../../assets/fonts/RobotoCondensed-Regular.ttf");
+}
+.menubar-container {
+  font-family: roboto-regular;
+  font-size: 1.2em;
+  position: fixed;
+  padding: 10px;
+  top: 0;
+  right: 0px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.menubar-container.selected {
+  background: #000000b5;
+  width: 100%;
+  height: 100%;
+}
+
+.menubar {
+  width: 50px;
+  height: 50px;
+  background-image: url("../../assets/images/menubar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.menuoptions {
+  display: block;
+  min-width: 230px;
+  min-height: 308px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.menuoptions.selected {
+  display: none;
+}
+
+.menuoptions ul {
+  list-style: none;
+  padding: 0px;
+}
+.menuoptions li {
+  cursor: pointer;
+  padding: 10px;
+}
+.menuoptions li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.menuoptions li:hover {
+  color: var(--highlight-color);
+}
+
+.nav-item > .active {
+  background-color: var(--highlight-color);
+}
