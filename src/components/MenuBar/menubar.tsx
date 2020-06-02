@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import classNames from "classnames";
 import "./menubar.css";
@@ -11,7 +11,7 @@ const MenuBar: FunctionComponent = () => {
     setShowMenu((state) => !state);
   };
 
-  const handelOnOutOfFocus = () => {
+  const toggleMenuOption = () => {
     setShowMenu((state) => !state);
   };
 
@@ -19,6 +19,18 @@ const MenuBar: FunctionComponent = () => {
     event.stopPropagation();
     setShowMenu((state) => !state);
   };
+
+  useEffect(() => {
+    const nav = document.getElementsByClassName("nav-item");
+    for (var i = 0; i < nav.length; i++) {
+      nav[i].addEventListener("click", toggleMenuOption, false);
+    }
+    return () => {
+      for (var i = 0; i < nav.length; i++) {
+        nav[i].removeEventListener("click", toggleMenuOption, false);
+      }
+    };
+  }, []);
 
   const menuBarContainerStyle = classNames({
     "menubar-container": true,
@@ -35,7 +47,7 @@ const MenuBar: FunctionComponent = () => {
   });
 
   return (
-    <div className={menuBarContainerStyle} onClick={handelOnOutOfFocus}>
+    <div className={menuBarContainerStyle} onClick={toggleMenuOption}>
       <div className={menuBarStyle} onClick={handelOnMenuBarSelected} />
       <div
         className={menuOptionStyle}

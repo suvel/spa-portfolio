@@ -1,5 +1,5 @@
 :root {
-  --highlight-color: #0060F3;
+  --highlight-color: #0060f3;
 }
 @font-face {
   font-family: roboto-regular;
@@ -58,6 +58,9 @@
   width: 100%;
   height: 100%;
   display: flex;
+  border-radius: 200px;
+  padding: 2px 14px;
+  box-sizing: border-box;
 }
 .menuoptions li:hover {
   color: var(--highlight-color);
