@@ -2,3 +2,4 @@ Hi! there :wave:, i'm maintaining this repo to Brand my self :sunglasses: and lo
 with me. -- have see this before , bcz its same message i have typed in my other repo :sweat_smile: [react-route portfolio ](https://github.com/suvel/protfolio)
 
 In this Repo i have tried to create a SPA type of portfolio , and use _react-route_ for Smooth scroll on nav chang.
+I have also used **react context** to switch the theme of the page.
