@@ -1,4 +1,5 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useContext } from "react";
+import { ThemeContext } from "../../context";
 import "./repeatingpatternbackgroundcontainer.css";
 type Props = {
   backGroundPatter: HTMLImageElement;
@@ -10,20 +11,19 @@ type Props = {
 const RepeatingPatternBackgroundContainer: FunctionComponent<Props> = (
   props
 ) => {
-  const {
-    backGroundPatter,
-    repeatVertical = false,
-    backgroundColor = "transparent",
-    customStyle = "",
-  } = props;
+  const { backGroundPatter, repeatVertical = false, customStyle = "" } = props;
+
   const direction = repeatVertical ? "x" : "y";
+
+  const themeColor = useContext(ThemeContext);
+
   return (
     <div
       className={`repeatingpatternbackground-container ${customStyle}`}
       style={{
         backgroundImage: `url(${backGroundPatter})`,
         backgroundRepeat: `repeat-${direction}`,
-        backgroundColor: `${backgroundColor}`,
+        backgroundColor: `${themeColor && themeColor.mainColor}`,
       }}
     >
       {props.children}

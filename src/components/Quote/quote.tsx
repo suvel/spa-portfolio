@@ -1,6 +1,6 @@
-import React, { FunctionComponent, ReactElement } from "react";
+import React, { FunctionComponent, ReactElement, useContext } from "react";
+import { ThemeContext } from "../../context";
 import "./quote.css";
-
 type Props = {
   quote: string;
   by: string;
@@ -11,16 +11,23 @@ type Props = {
 
 const Quote: FunctionComponent<Props> = (props) => {
   const { customWrapperStyle = "", image, quote, by, extra } = props;
+  const theme = useContext(ThemeContext);
   return (
     <div className={`quote-container ${customWrapperStyle}`}>
-      <div className="tellerImage-container">
+      <div
+        style={{ backgroundImage: `url(${theme && theme.tellerEllipse})` }}
+        className="tellerImage-container"
+      >
         <img
           className="tellerImage"
           src={image}
           alt={"person that quoted the below quote"}
         />
       </div>
-      <div className="quotecontent-container">
+      <div
+        style={{ backgroundColor: theme && theme.tertiaryColor }}
+        className="quotecontent-container"
+      >
         <div className="quote">
           <p>
             "{quote}"<br />

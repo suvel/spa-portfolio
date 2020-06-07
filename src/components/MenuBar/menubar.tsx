@@ -1,5 +1,12 @@
-import React, { FunctionComponent, useState, useEffect } from "react";
+import React, {
+  FunctionComponent,
+  useState,
+  useEffect,
+  useContext,
+} from "react";
+import { ThemeSwitcher } from "../../components";
 import { Link } from "react-scroll";
+import { ThemeContext } from "../../context";
 import classNames from "classnames";
 import "./menubar.css";
 
@@ -46,13 +53,20 @@ const MenuBar: FunctionComponent = () => {
     selected: !showMenu,
   });
 
+  const theme = useContext(ThemeContext);
+
   return (
     <div className={menuBarContainerStyle} onClick={toggleMenuOption}>
-      <div className={menuBarStyle} onClick={handelOnMenuBarSelected} />
+      <div
+        style={{ backgroundImage: `url(${theme && theme.menuBarIcon})` }}
+        className={menuBarStyle}
+        onClick={handelOnMenuBarSelected}
+      />
       <div
         className={menuOptionStyle}
         onClick={(event) => event.stopPropagation()}
       >
+        <ThemeSwitcher />
         <ul onChange={handelClickPropagation}>
           <li className="nav-item">
             <Link

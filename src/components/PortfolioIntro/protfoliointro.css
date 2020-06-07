@@ -1,0 +1,23 @@
+.intro-paragraph {
+  font-style: normal;
+  font-size: 2em;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .intro-paragraph {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 769px) {
+  .intro-paragraph {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .intro-paragraph {
+    font-size: 1.5em;
+  }
+}

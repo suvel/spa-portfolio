@@ -24,7 +24,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
-  background-image: url("../..//assets/images/Ellipse.svg");
 }
 
 .tellerImage {
@@ -36,7 +35,6 @@
 .quotecontent-container {
   width: 100%;
   height: 337px;
-  background: white;
   position: absolute;
   bottom: 0;
   padding: 90px 5vh 0px;

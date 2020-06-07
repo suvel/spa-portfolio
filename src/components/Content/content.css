@@ -6,8 +6,7 @@
 .portfolio-details-container .header {
   font-family: roboto-bold;
   font-size: 48px;
-  -webkit-text-stroke: 0.070em black;
-  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 0.07em;
   letter-spacing: -2px;
 }
 

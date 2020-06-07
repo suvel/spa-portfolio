@@ -1,0 +1,30 @@
+.themeswitcher-container {
+  display: flex;
+  padding: 10px;
+  float: right;
+  font-size: 15px;
+  color: gray;
+}
+
+.toggler-container {
+  width: 40px;
+  height: 25px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.toggler {
+  min-width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 4px solid;
+  box-sizing: border-box;
+}
+
+.switch {
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+}

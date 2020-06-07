@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useCallback, FunctionComponent } from "react";
 import {
   RepeatingPatternBackgroundContainer,
   PageHeader,
@@ -6,14 +6,28 @@ import {
   Emoji,
   Content,
   MenuBar,
+  PortfolioIntro,
+  ContentHeader,
+  ContentContainer,
 } from "./components";
+import { ThemeContext } from "./context";
 import "./App.css";
-const portfolioSubject = require("./assets/images/guywithmic2.png");
 const author1 = require("./assets/images/mark-img.png");
 const author2 = require("./assets/images/billgates-img.png");
 const backgroundPattern = require("./assets/images/bgdull-img.svg");
 
-function App() {
+const App: FunctionComponent = () => {
+  const theme = useContext(ThemeContext);
+
+  const getPortfolioSubjectByTheme = useCallback(() => {
+    if (theme && theme.themeName === "lightTheme") {
+      return require("./assets/images/guywithmic2.png");
+    }
+    if (theme && theme.themeName === "darkTheme") {
+      return require("./assets/images/guywithmic2-darktheme.png");
+    }
+  }, [theme]);
+
   return (
     <RepeatingPatternBackgroundContainer
       backGroundPatter={backgroundPattern}
@@ -26,19 +40,16 @@ function App() {
         <div className="welcome-header">
           <PageHeader>WELCOME</PageHeader>
         </div>
-        <div className="intro-paragraph">
-          <p>
-            <span>Hi!, i'm</span>
-            <br />
-            <span className={"weight-regular"}>Suvel Rathneswar</span>
-            <br />
-            <span className={"weight-regular"}>Web Developer</span>
-            <br />
+        <PortfolioIntro
+          introText={"Hi!, i'm"}
+          name={"Suvel Rathneswar"}
+          profession={"Web Developer"}
+          extra={
             <span>
               <Emoji label="office bag" symbol={"💼"} />@ Soft Suave,Banglore
             </span>
-          </p>
-        </div>
+          }
+        />
       </div>
       <Quote
         customWrapperStyle="quotes-wrapper"
@@ -48,7 +59,7 @@ function App() {
         image={author1}
         extra={
           <img
-            src={portfolioSubject}
+            src={getPortfolioSubjectByTheme()}
             alt={"personalphoto"}
             className="personal-image"
           />
@@ -128,11 +139,12 @@ function App() {
         by="Bill Gates"
         image={author2}
         extra={
-          <div className="portfolio-details-container">
-            <h2 className="header">
-              Send Feedback <Emoji label="office bag" symbol={"💌"} />
-            </h2>
-          </div>
+          <ContentContainer>
+            <ContentHeader
+              header={"Send Feedback"}
+              emoji={<Emoji label="office bag" symbol={"💌"} />}
+            />
+          </ContentContainer>
         }
       />
       <div className="container">
@@ -145,6 +157,6 @@ function App() {
       </div>
     </RepeatingPatternBackgroundContainer>
   );
-}
+};
 
 export default App;

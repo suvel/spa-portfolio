@@ -31,12 +31,6 @@
   bottom: 0;
 }
 
-.intro-paragraph {
-  font-style: normal;
-  font-size: 2em;
-  color: white;
-}
-
 .weight-regular {
   font-size: 2em;
   font-family: roboto-regular !important;
@@ -54,9 +48,6 @@
   .personal-image {
     display: none;
   }
-  .intro-paragraph {
-    font-size: 1.2em;
-  }
   .author-quotes-container {
     font-size: 20px;
   }
@@ -72,9 +63,6 @@
 }
 
 @media (min-width: 481px) and (max-width: 769px) {
-  .intro-paragraph {
-    font-size: 1.2em;
-  }
   .author-quotes-container {
     font-size: 24px;
     max-width: 23rem;
@@ -87,9 +75,6 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .portfolio-style {
     background-size: contain;
-  }
-  .intro-paragraph {
-    font-size: 1.5em;
   }
   .author-quotes-container {
     font-size: 24px;
