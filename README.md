@@ -1,5 +1,3 @@
-Hi! there :wave:, i'm maintaining this repo to Brand my self :sunglasses: and log my learning :books: and choices of lib i use in my profession .This repo will getting updating
-with me. -- have see this before , bcz its same message i have typed in my other repo :sweat_smile: [react-route portfolio ](https://github.com/suvel/protfolio)
+Last updated made on  Jun 7, 2020
 
-In this Repo i have tried to create a SPA type of portfolio , and use _react-route_ for Smooth scroll on nav chang.
-I have also used **react context** to switch the theme of the page.
+[Link of the hosted portfolio 🔗](https://suvel.github.io/spa-portfolio/)
