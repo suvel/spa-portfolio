@@ -151,7 +151,7 @@ const App: FunctionComponent = () => {
         <Content
           id={"content5"}
           header={"Hire me!"}
-          body={<p className="bold-link">suvel@softsuave.com</p>}
+          body={<p className="bold-link">find.suvel@gmail.com</p>}
           emoji={<Emoji label={"repo"} symbol={"🤝"} />}
         />
       </div>
