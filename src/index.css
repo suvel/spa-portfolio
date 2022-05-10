@@ -1,4 +1,13 @@
 body {
   margin: 0;
+  height: 100vh;
 }
 
+a.bule-bg {
+  color: white;
+  width: fit-content;
+}
+
+a.bule-bg:hover {
+  color: greenyellow;
+}

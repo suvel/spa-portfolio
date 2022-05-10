@@ -38,6 +38,7 @@
 
 .bold-link {
   font-weight: 500;
+  display: block;
 }
 
 .justified-paragraph {

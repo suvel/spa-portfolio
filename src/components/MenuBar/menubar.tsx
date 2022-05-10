@@ -66,7 +66,7 @@ const MenuBar: FunctionComponent = () => {
         className={menuOptionStyle}
         onClick={(event) => event.stopPropagation()}
       >
-        <ThemeSwitcher />
+        {/* <ThemeSwitcher /> */}
         <ul onChange={handelClickPropagation}>
           <li className="nav-item">
             <Link
@@ -78,7 +78,7 @@ const MenuBar: FunctionComponent = () => {
               offset={-70}
               duration={500}
             >
-              Libraries
+              Skills
             </Link>
           </li>
           <li className="nav-item">
@@ -91,7 +91,7 @@ const MenuBar: FunctionComponent = () => {
               offset={-70}
               duration={500}
             >
-              Current Project
+              Projects
             </Link>
           </li>
           <li className="nav-item">
@@ -104,7 +104,7 @@ const MenuBar: FunctionComponent = () => {
               offset={-70}
               duration={500}
             >
-              My works
+              Digital footprint
             </Link>
           </li>
           <li className="nav-item">
@@ -118,19 +118,6 @@ const MenuBar: FunctionComponent = () => {
               duration={500}
             >
               Current Working Status
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              hashSpy={true}
-              activeClass="active"
-              to="content5"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Hire me
             </Link>
           </li>
         </ul>
